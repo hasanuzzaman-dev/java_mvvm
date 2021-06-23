@@ -17,7 +17,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class MovieRepository {
+public class MovieRepository implements MovieRepositoryImpl{
 
     private static Context mContext;
     private static MovieRepository movieRepository;
@@ -34,6 +34,7 @@ public class MovieRepository {
         return movieRepository;
     }
 
+    @Override
     public MutableLiveData<List<Result>> getTopRatedMovieList(){
         Log.d(TAG, "getTopRatedMovieList: started");
 
