@@ -1,8 +1,10 @@
-package com.hasan.javamvvm;
+package com.hasan.javamvvm.views;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.hasan.javamvvm.R;
 
 public class MainActivity extends AppCompatActivity {
 
