@@ -54,4 +54,13 @@ public class MovieModel {
         this.totalResults = totalResults;
     }
 
+    @Override
+    public String toString() {
+        return "MovieModel{" +
+                "page=" + page +
+                ", results=" + results +
+                ", totalPages=" + totalPages +
+                ", totalResults=" + totalResults +
+                '}';
+    }
 }
