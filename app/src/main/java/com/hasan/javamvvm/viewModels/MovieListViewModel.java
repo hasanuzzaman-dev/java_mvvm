@@ -8,18 +8,19 @@ import androidx.lifecycle.MutableLiveData;
 
 import com.hasan.javamvvm.service.model.Result;
 import com.hasan.javamvvm.service.repositories.MovieRepository;
+import com.hasan.javamvvm.service.repositories.MovieRepositoryImpl;
 
 import java.util.List;
 
 public class MovieListViewModel extends AndroidViewModel {
-    private final MovieRepository movieRepository;
+    private final MovieRepositoryImpl movieRepositoryImpl;
 
     public MovieListViewModel(Application application) {
         super(application);
-        movieRepository = MovieRepository.getMovieRepository(application);
+         movieRepositoryImpl = MovieRepository.getMovieRepository(application);
     }
 
     public LiveData<List<Result>> getTopRatedMovieList() {
-        return movieRepository.getTopRatedMovieList();
+        return movieRepositoryImpl.getTopRatedMovieList();
     }
 }
